@@ -1,9 +1,14 @@
 # Add deadsnakes for Python
-sudo add-apt-repository ppa:deadsnakes/ppa
-# Install common software
-sudo apt -y install software-properties-common
-# Install basics
-sudo apt -y install vim git curl python3.9-distutils build-essential
+# sudo add-apt-repository ppa:deadsnakes/ppa
+
+# Install basics + common software
+sudo apt -y install software-properties-common vim git curl python3.9-distutils build-essential
+
+# NVIDIA drivers PPA
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt -y update
+sudo apt -y install nvidia-driver-465
+
 # Update and upgrade
 sudo apt -y update && sudo apt -y upgrade
 
@@ -19,13 +24,23 @@ curl -fsSl https://bootstrap.pypa.io/get-pip.py | python3
 sudo snap install --classic code
 
 # Add pip to PATH
-export PATH="$PATH:~/.local/bin"
+echo 'export PATH="$PATH:~/.local/bin"' >> ~/.bashrc
 
-# python3 is now just python
-alias python=python3
+# python3 == python
+echo 'alias python=python3' >> ~/.bashrc
+
+# pip == pip3
+echo 'alias pip3=pip' >> ~/.bashrc
+
+# CUDA stuff to PATH
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib' >> ~/.bashrc
+echo 'export PATH=$PATH:/usr/local/cuda/bin' >> ~/.bashrc 
+
+# Apply changes
+source ~/.bashrc
 
 # Update and upgrade again
 sudo apt -y update && sudo apt -y upgrade
 
 # Install Jupyter
-pip install jupyterlab notebook
+pip install jupyterlab notebook pyyaml 
