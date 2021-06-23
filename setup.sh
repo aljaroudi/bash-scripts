@@ -2,7 +2,7 @@
 # sudo add-apt-repository ppa:deadsnakes/ppa
 
 # Install basics + common software
-sudo apt -y install software-properties-common vim git curl python3.9-distutils build-essential
+sudo apt -y install software-properties-common vim git curl python3.9-distutils build-essential nodejs npm
 
 # NVIDIA drivers PPA
 sudo add-apt-repository ppa:graphics-drivers/ppa
