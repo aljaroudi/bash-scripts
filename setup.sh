@@ -21,7 +21,7 @@ rm chrome.deb
 curl -fsSl https://bootstrap.pypa.io/get-pip.py | python3
 
 # Install VS Code using Snap
-sudo snap install --classic code
+sudo snap install --classic code vlc telegram-desktop
 
 # Add pip to PATH
 echo 'export PATH="$PATH:~/.local/bin"' >> ~/.bashrc
