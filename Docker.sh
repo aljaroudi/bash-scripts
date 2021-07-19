@@ -30,15 +30,9 @@ sudo apt -y update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 # 2.2 Verify installation
-0 if echo $* | grep -e "--verify" -q
-    1 then  
-    2 echo "verify on"
-    3 else
-    4   echo "verify off"
-    5 fi
-
 if echo $* | grep -e "--verify" -q
 then
   sudo docker run hello-world
 else
   echo "Done. Run this to verify installation:\nsudo docker run hello-world"
+fi
