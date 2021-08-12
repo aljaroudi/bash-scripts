@@ -1,1 +1,1 @@
-# ubuntu2104-setup
+# bash setup
