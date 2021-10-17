@@ -39,6 +39,8 @@ brew "fish"
 brew "gh"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Port scanning utility for large networks
 brew "nmap"
 # Implementation of Telnet and SSH
