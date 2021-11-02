@@ -8,7 +8,7 @@ brew "babel"
 # Library for manipulating PNG images
 brew "libpng"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
+brew "python@3.10"
 # Core application library for C
 brew "glib"
 # Manage compile and link flags for libraries
